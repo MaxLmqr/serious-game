@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import WifiRid from "./WifiRid";
-import Login from "./Login";
+import PasswordRid from "./PasswordRid";
 import MailRid from "./MailRid";
 import Welcome from "./Welcome";
 import "./css/App.css";
@@ -10,12 +10,10 @@ const App = () => {
     <Fragment>
       <Welcome />
       <WifiRid />
-      <Login />
+      <PasswordRid />
       <MailRid />
     </Fragment>
   );
 };
 
 export default App;
-
-

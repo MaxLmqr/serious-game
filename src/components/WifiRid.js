@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import wifis from "../datas/wifilist";
-import Wifi from "./Wifi";
 import WifiExp from "./WifiExp";
+import WifiList from "./WifiList";
 import Winning from "./Winning";
 import Informations from "./Informations";
 
@@ -27,34 +27,23 @@ class WifiRid extends Component {
     this.setState({ informations });
   };
 
+  onReturnWinningClick = () => {
+    this.setState({ selected: 1 });
+  };
+
   renderContent = () => {
     if (this.state.selected === 3) {
       return (
         <div>
-          <Winning />
           <WifiExp />
+          <Winning onClick={this.onReturnWinningClick} />
         </div>
       );
     } else {
       return (
         <div>
           <Informations informations={this.state.informations} />
-          <div className="ui container">
-            <div className="ui grid segment">
-              <div className="row">
-                <div className="column four wide">Nom</div>
-                <div className="column four wide">Type de Sécurité</div>
-                <div className="column four wide">Intensité du signal</div>
-              </div>
-              {Object.keys(this.state.wifis).map(key => (
-                <Wifi
-                  key={key}
-                  wifi={this.state.wifis[key]}
-                  onClick={this.handleClick}
-                />
-              ))}
-            </div>
-          </div>
+          <WifiList wifis={this.state.wifis} handleClick={this.handleClick} />
         </div>
       );
     }

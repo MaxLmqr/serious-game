@@ -16,14 +16,23 @@ class Login extends Component {
     const password = event.target.value;
     this.setState({ password });
   };
+  onInputClick = () => {
+    const s = document.createElement("script");
+    s.type = "text/javascript";
+    s.async = true;
+    s.innerHTML = "console.log('bien execute')";
+    this.instance.appendChild(s);
+  };
+
   render() {
     return (
-      <div className="loginContent">
+      <div className="loginContent" ref={el => (this.instance = el)}>
         <Inputs
           login={this.state.login}
           password={this.state.password}
           onEmailChange={this.onEmailChange}
           onPasswordChange={this.onPasswordChange}
+          onClick={this.onInputClick}
         />
       </div>
     );
