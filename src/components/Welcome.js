@@ -5,9 +5,7 @@ const Welcome = () => {
   return (
     <div className="ui inverted vertical masthead center aligned segment">
       <div className="ui text container">
-        <h1 className="ui inverted header">
-          Bienvenue dans ce serious game Test de changement !
-        </h1>
+        <h1 className="ui inverted header">Bienvenue dans ce serious game !</h1>
         <h2>
           {" "}
           Naviguez à travers ce site en faisant les bons choix pour chaque
