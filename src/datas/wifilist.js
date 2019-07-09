@@ -3,36 +3,31 @@ const wifis = {
     id: 1,
     name: "Wifi de Jack",
     security: "WEP",
-    intensity: "Fort",
-    informations: "Ce reseau wifi est ....."
+    intensity: "Trop fort, vous vous faites irradier"
   },
   wifi2: {
     id: 2,
     name: "Wifi de Gibs",
     security: "WPA",
-    intensity: "Faible",
-    informations: "Ce reseau wifi est ..... pas mal sécurisé"
+    intensity: "Faible, Gibs revient mon ami"
   },
   wifi3: {
     id: 3,
     name: "Wifi de Polia",
     security: "WPA2",
-    intensity: "Correct",
-    informations: "Bravo ! Ce réseau est le plus sûr !!"
+    intensity: "Une valeur sûre"
   },
   wifi4: {
     id: 4,
     name: "Wifi de CaptainM",
     security: "Aucune",
-    intensity: "Faible",
-    informations: "Aucune sécurité...hmmm c'est suspect"
+    intensity: "ça va, c'est pas ouf mais ça va"
   },
   wifi5: {
     id: 5,
     name: "Wifi public",
     security: "Aucune",
-    intensity: "Moyenne",
-    informations: "C'est un wifi public, evitez de vous rendre sur des sites de type banque, ..."
+    intensity: "fort, viens par ici mon ami !"
   }
 };
 

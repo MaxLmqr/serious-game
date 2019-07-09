@@ -13,13 +13,15 @@ const Welcome = props => {
         </h2>
         <h3>Bonne Chance !</h3>
         <button className="ui huge primary button" onClick={props.upAvancement}>
-          Commencez
+          Commencer
           <i className="right arrow icon" />
         </button>
         <div className="ui inverted footer">
           <p>
             Pour chaque situation, nous vous proposerons des explications sur le
-            choix qui était attendu.
+            choix qui était attendu. Nous avons essayé de trouver des exemples
+            de cas concrets qui s'étaient produits pour chaque cas de figure. En
+            espérant que cela vous intéresse !
           </p>
         </div>
       </div>

@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import "./css/Login.css";
 import Inputs from "./Inputs";
+import zxcvbn from "zxcvbn";
 
 class Login extends Component {
   state = {
-    login: "",
     password: ""
   };
 
-  onEmailChange = event => {
-    const login = event.target.value;
-    this.setState({ login });
-  };
   onPasswordChange = event => {
     const password = event.target.value;
     this.setState({ password });
@@ -30,20 +26,22 @@ class Login extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log("coucou");
-    this.logging();
+    const testpassword = zxcvbn(this.state.password);
+    this.props.logging(testpassword);
   };
 
   render() {
     return (
-      <div className="loginContent" ref={el => (this.instance = el)}>
-        <Inputs
-          login={this.state.login}
-          password={this.state.password}
-          onEmailChange={this.onEmailChange}
-          onPasswordChange={this.onPasswordChange}
-          handleSubmit={this.props.logging}
-        />
+      <div>
+        <div className="loginContent" ref={el => (this.instance = el)}>
+          <Inputs
+            login={this.state.login}
+            password={this.state.password}
+            onEmailChange={this.onEmailChange}
+            onPasswordChange={this.onPasswordChange}
+            handleSubmit={this.handleSubmit}
+          />
+        </div>
       </div>
     );
   }

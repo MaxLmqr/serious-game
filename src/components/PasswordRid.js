@@ -1,16 +1,19 @@
-import React, { Fragment, Component } from "react";
+import React, { Component } from "react";
 import Login from "./Login";
+import Informations from "./Informations";
 import PasswordExp from "./PasswordExp";
+import PasswordResult from "./PasswordResult";
 import "./css/Password.css";
 import Winning from "./Winning";
-
 class PasswordRid extends Component {
   state = {
-    logged: false
+    logged: false,
+    passwordResult: {}
   };
-
-  loggedIn = () => {
+  loggedIn = passwordResult => {
     this.setState({ logged: true });
+    this.setState({ passwordResult });
+    console.log(passwordResult);
   };
 
   onReturnWinningClick = () => {
@@ -18,18 +21,26 @@ class PasswordRid extends Component {
   };
 
   renderContent = () => {
+    const informations =
+      "Vous voyez ci-dessous un cadre d'authentification. Choisissez un mot de passe, nous allons tester sa robustesse.";
     if (this.state.logged === true) {
       return (
-        <Fragment>
+        <div className="passwordContent">
+          <PasswordResult passwordResult={this.state.passwordResult} />
           <PasswordExp />
           <Winning
             onWinningClick={this.props.upAvancement}
             onReturnWinningClick={this.onReturnWinningClick}
           />
-        </Fragment>
+        </div>
       );
     } else {
-      return <Login logging={() => this.loggedIn()} />;
+      return (
+        <div className="passwordContent">
+          <Informations informations={informations} />
+          <Login logging={p => this.loggedIn(p)} />;
+        </div>
+      );
     }
   };
   render() {
