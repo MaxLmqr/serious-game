@@ -17,11 +17,21 @@ class Login extends Component {
     this.setState({ password });
   };
   onInputClick = () => {
+    this.props.logging();
+
     const s = document.createElement("script");
     s.type = "text/javascript";
     s.async = true;
     s.innerHTML = "console.log('bien execute')";
     this.instance.appendChild(s);
+  };
+  logging = () => {
+    this.props.logging();
+  };
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log("coucou");
+    this.logging();
   };
 
   render() {
@@ -32,7 +42,7 @@ class Login extends Component {
           password={this.state.password}
           onEmailChange={this.onEmailChange}
           onPasswordChange={this.onPasswordChange}
-          onClick={this.onInputClick}
+          handleSubmit={this.props.logging}
         />
       </div>
     );

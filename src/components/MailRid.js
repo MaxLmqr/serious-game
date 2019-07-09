@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Mail from "./Mail";
+import MailDetail from "./MailDetail";
 import mails from "../datas/maillist";
 
 class mailRid extends Component {
@@ -14,14 +15,14 @@ class mailRid extends Component {
   componentDidMount() {
     this.setState({ mails });
   }
-  
-  onMailReturnClick = () => {
-    this.setState({mailRef: 0})
-  }
 
-  onMailClick = (mail) => {
-    console.log('Clicked !')
-    this.setState({mailRef: mail.id, mail: mail})
+  onMailReturnClick = () => {
+    console.log("coucou");
+    this.setState({ mailRef: 0 });
+  };
+
+  onMailClick = mail => {
+    this.setState({ mailRef: mail.id, mail: mail });
   };
 
   render() {
@@ -48,10 +49,10 @@ class mailRid extends Component {
       );
     }
     return (
-      <Mail 
-        onMailClick={this.onMailReturnClick}
+      <MailDetail
+        onMailReturnClick={this.onMailReturnClick}
         mail={this.state.mail}
-        buttonContent="Retour aux mails" />
+      />
     );
   }
 }

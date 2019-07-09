@@ -1,6 +1,7 @@
 const mails = {
   mail1: {
     id: 1,
+    solved: false,
     subject: "[Important] Mise à niveau",
     date: "15/07/2019",
     expediteur: "Administrateur",
@@ -9,6 +10,7 @@ const mails = {
   },
   mail2: {
     id: 2,
+    solved: false,
     subject: "Sujet ...",
     date: "Date ....",
     expediteur: "Expediteur ...",
@@ -17,6 +19,7 @@ const mails = {
   },
   mail3: {
     id: 3,
+    solved: false,
     subject: "Sujet ...",
     date: "Date ....",
     expediteur: "Expediteur ...",
@@ -25,6 +28,7 @@ const mails = {
   },
   mail4: {
     id: 4,
+    solved: false,
     subject: "Sujet ...",
     date: "Date ....",
     expediteur: "Expediteur ...",

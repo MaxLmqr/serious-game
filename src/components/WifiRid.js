@@ -31,12 +31,19 @@ class WifiRid extends Component {
     this.setState({ selected: 1 });
   };
 
+  onWinningClick = () => {
+    this.props.upAvancement();
+  };
+
   renderContent = () => {
     if (this.state.selected === 3) {
       return (
         <div>
           <WifiExp />
-          <Winning onClick={this.onReturnWinningClick} />
+          <Winning
+            onReturnWinningClick={this.onReturnWinningClick}
+            onWinningClick={this.onWinningClick}
+          />
         </div>
       );
     } else {

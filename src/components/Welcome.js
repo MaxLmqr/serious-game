@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Welcome.css";
 
-const Welcome = () => {
+const Welcome = props => {
   return (
     <div className="ui inverted vertical masthead center aligned segment">
       <div className="ui text container">
@@ -12,10 +12,10 @@ const Welcome = () => {
           énigme
         </h2>
         <h3>Bonne Chance !</h3>
-        <div className="ui huge primary button">
+        <button className="ui huge primary button" onClick={props.upAvancement}>
           Commencez
           <i className="right arrow icon" />
-        </div>
+        </button>
         <div className="ui inverted footer">
           <p>
             Pour chaque situation, nous vous proposerons des explications sur le

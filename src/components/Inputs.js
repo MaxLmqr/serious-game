@@ -1,11 +1,18 @@
 import React from "react";
 
 const Inputs = props => {
-  const { login, password, onEmailChange, onPasswordChange, onClick } = props;
+  const {
+    login,
+    password,
+    onEmailChange,
+    onPasswordChange,
+    handleSubmit
+  } = props;
+
   return (
     <div className="ui grid">
       <div className="column">
-        <form className="ui large form">
+        <form className="ui large form" onSubmit={handleSubmit}>
           <div className="ui stacked segment">
             <div className="field">
               <div className="ui left icon input">
@@ -16,6 +23,7 @@ const Inputs = props => {
                   value={login}
                   placeholder="E-mail address"
                   onChange={onEmailChange}
+                  required
                 />
               </div>
             </div>
@@ -23,6 +31,7 @@ const Inputs = props => {
               <div className="ui left icon input">
                 <i className="lock icon" />
                 <input
+                  required
                   type="password"
                   name="password"
                   value={password}
@@ -31,12 +40,9 @@ const Inputs = props => {
                 />
               </div>
             </div>
-            <div
-              onClick={onClick}
-              className="ui fluid large teal submit button"
-            >
+            <button type="submit" className="ui fluid large teal submit button">
               Login
-            </div>
+            </button>
           </div>
         </form>
       </div>
