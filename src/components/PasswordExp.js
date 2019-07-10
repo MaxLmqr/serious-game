@@ -1,12 +1,12 @@
 import React from "react";
 import "./css/Password.css";
+import passwordexp from "../datas/passwordexp";
 
 const PasswordExp = () => {
   return (
     <div className="passwordContent">
       <div className="ui container segment">
-        <h1>EXPLICATIONS</h1>
-        <p>Petite page récapitulant des informations sur les mots de passe</p>
+        <div dangerouslySetInnerHTML={{ __html: passwordexp }} />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Mail from "./Mail";
 import MailDetail from "./MailDetail";
+import Winning from "./Winning";
 import mails from "../datas/maillist";
 
 class mailRid extends Component {
@@ -9,20 +10,36 @@ class mailRid extends Component {
     informations:
       "Choisissez un des mails qui apparait à votre écran. Pour chaque mail, déterminez si il est frauduleux ou pas.",
     mailRef: 0,
-    mail: {}
+    mail: {},
+    numSolved: 0,
+    numMails: 10
   };
 
   componentDidMount() {
     this.setState({ mails });
   }
 
+  upSolve = () => {
+    this.setState({ numSolved: this.state.numSolved + 1 });
+  };
+
   onMailReturnClick = () => {
-    console.log("coucou");
     this.setState({ mailRef: 0 });
   };
 
   onMailClick = mail => {
     this.setState({ mailRef: mail.id, mail: mail });
+  };
+
+  renderWinningContent = () => {
+    if (this.state.numSolved === this.state.numMails) {
+      return (
+        <Winning
+          onReturnWinningClick={this.props.downAvancement}
+          onWinningClick={this.props.upAvancement}
+        />
+      );
+    }
   };
 
   render() {
@@ -45,6 +62,7 @@ class mailRid extends Component {
               );
             })}
           </div>
+          {this.renderWinningContent()}
         </div>
       );
     }
@@ -52,6 +70,7 @@ class mailRid extends Component {
       <MailDetail
         onMailReturnClick={this.onMailReturnClick}
         mail={this.state.mail}
+        upSolve={() => this.upSolve()}
       />
     );
   }

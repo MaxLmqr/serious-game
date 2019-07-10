@@ -13,7 +13,6 @@ class PasswordRid extends Component {
   loggedIn = passwordResult => {
     this.setState({ logged: true });
     this.setState({ passwordResult });
-    console.log(passwordResult);
   };
 
   onReturnWinningClick = () => {
@@ -28,6 +27,7 @@ class PasswordRid extends Component {
         <div className="passwordContent">
           <PasswordResult passwordResult={this.state.passwordResult} />
           <PasswordExp />
+          <br />
           <Winning
             onWinningClick={this.props.upAvancement}
             onReturnWinningClick={this.onReturnWinningClick}
