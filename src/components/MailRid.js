@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Mail from "./Mail";
+import MailPreview from "./MailPreview";
 import MailDetail from "./MailDetail";
+import Informations from "./Informations";
 import Winning from "./Winning";
 import mails from "../datas/maillist";
 
@@ -46,14 +47,11 @@ class mailRid extends Component {
     if (this.state.mailRef === 0) {
       return (
         <div>
-          <div className="ui container segment">
-            <h1>Informations :</h1>
-            <p> {this.state.informations} </p>
-          </div>
+          <Informations informations={this.state.informations} />
           <div className="ui container">
             {Object.keys(this.state.mails).map(key => {
               return (
-                <Mail
+                <MailPreview
                   key={key}
                   onMailClick={this.onMailClick}
                   mail={this.state.mails[key]}

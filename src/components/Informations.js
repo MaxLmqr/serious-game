@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Informations = (props) => {
-  const {informations} = props
+const Informations = props => {
+  const { informations } = props;
   return (
-    <div className="ui container segment">
-          <h1>Informations :</h1>
-          <p> {informations} </p>
-        </div>
-  )
-}
+    <div id="informations" className="ui segment">
+      <h1>Informations :</h1>
+      <p> {informations} </p>
+    </div>
+  );
+};
 
-export default Informations
+export default Informations;

@@ -4,10 +4,14 @@ html {
 
 #root {
   background-color: #1b1c1d;
-  padding: 5% 0;
   min-height: 100vh;
+  padding: 5vh 0vh;
 }
 
 img {
   margin: 30px 8%;
+}
+
+#informations {
+  margin-bottom: 15vh;
 }

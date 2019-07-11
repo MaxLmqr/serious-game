@@ -8,7 +8,7 @@ const MailCheckButton = props => {
       <div className="column eight wide">
         <button
           onClick={() => onRightAnswerClick(mail)}
-          className="massive ui green button"
+          className="ui green button"
         >
           Sans danger
         </button>
@@ -16,7 +16,7 @@ const MailCheckButton = props => {
       <div className="column eight wide">
         <button
           onClick={() => onWrongAnswerClick(mail)}
-          className="massive ui red button"
+          className="ui red button"
         >
           Dangereux
         </button>

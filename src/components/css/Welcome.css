@@ -3,9 +3,13 @@
 }
 
 .ui.inverted.footer {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .ui.huge.primary.button {
-  margin-top: 10%;
+  margin-top: 5%;
+}
+
+#contentBox {
+  padding-top: 22vh;
 }

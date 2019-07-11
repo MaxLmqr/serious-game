@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Fragment, Component } from "react";
 import wifis from "../datas/wifilist";
 import WifiExp from "./WifiExp";
 import WifiList from "./WifiList";
@@ -36,36 +36,38 @@ class WifiRid extends Component {
   renderContent = () => {
     const informations =
       "Parmis les réseaux wifis disponibles, choisissez le réseau wifi qui est le plus sécurisé.";
+    // Retourne la liste de tous les wifis disponible, aucun n'a encore été sélectionné.
+    if (this.state.selected === null) {
+      return (
+        <Fragment>
+          <Informations informations={informations} />
+          <WifiList wifis={this.state.wifis} handleClick={this.handleClick} />
+        </Fragment>
+      );
+    }
+
     // Id du wifi correspondant à la bonne réponde : [3]
     if (this.state.selected === 3) {
       return (
-        <div>
+        <Fragment>
           <WifiExp answer="right" />
           <Winning
             onReturnWinningClick={this.onReturnWinningClick}
             onWinningClick={this.onWinningClick}
           />
-        </div>
-      );
-    }
-    if (this.state.selected === null) {
-      return (
-        <div>
-          <Informations informations={informations} />
-          <WifiList wifis={this.state.wifis} handleClick={this.handleClick} />
-        </div>
+        </Fragment>
       );
     }
 
     return (
-      <div>
+      <Fragment>
         <WifiExp answer="wrong" />;
         <div className="ui one column stackable center aligned page grid">
           <button className="ui red button" onClick={this.onReturnWinningClick}>
             Revenez en arrière et réessayer
           </button>
         </div>
-      </div>
+      </Fragment>
     );
   };
 

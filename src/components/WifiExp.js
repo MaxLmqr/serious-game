@@ -16,10 +16,9 @@ const WifiExp = props => {
   }
   return (
     <div className="ui container segment">
-      <h1>EXPLICATIONS</h1>
-      <h2>
+      <h1>
         Bravo ! Vous êtes en lieu sûr, naviguez paisiblement sur la toile !
-      </h2>
+      </h1>
       <div dangerouslySetInnerHTML={{ __html: wifiexp }} />
     </div>
   );

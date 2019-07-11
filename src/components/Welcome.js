@@ -3,7 +3,10 @@ import "./css/Welcome.css";
 
 const Welcome = props => {
   return (
-    <div className="ui inverted vertical masthead center aligned segment">
+    <div
+      id="contentBox"
+      className="ui inverted vertical masthead center aligned segment"
+    >
       <div className="ui text container">
         <h1 className="ui inverted header">Bienvenue dans ce serious game !</h1>
         <h2>
