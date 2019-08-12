@@ -3,19 +3,19 @@ const wifis = {
     id: 1,
     name: "Wifi de Jack",
     security: "WEP",
-    intensity: "Trop loin....noooooon! Revient Jack !!"
+    intensity: "Très faible...noooooon! Revient Jack !"
   },
   wifi2: {
     id: 2,
     name: "Wifi de Gibs",
     security: "WPA",
-    intensity: "Fort, ce bon vieux Gibs"
+    intensity: "Fort"
   },
   wifi3: {
     id: 3,
     name: "Wifi de Pinpin",
     security: "WPA2",
-    intensity: "Tiens, voilà pinpin"
+    intensity: "Correct"
   },
   wifi4: {
     id: 4,
@@ -27,7 +27,7 @@ const wifis = {
     id: 5,
     name: "Wifi public",
     security: "Aucune",
-    intensity: "fort, viens par ici mon ami !"
+    intensity: "Fort"
   }
 };
 

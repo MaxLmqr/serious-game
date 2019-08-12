@@ -7,6 +7,7 @@ const PasswordResult = props => {
       <p>
         <strong>Nombre d'essai estimé pour cracker le mot de passe : </strong>{" "}
         {passwordResult.guesses}
+        {/* {passwordResult} */}
       </p>
       <p>
         <strong>

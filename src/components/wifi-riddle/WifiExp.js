@@ -1,5 +1,5 @@
 import React from "react";
-import wifiexp from "../datas/wifiexp";
+import wifiexp from "../../datas/wifiexp";
 
 const WifiExp = props => {
   const { answer } = props;

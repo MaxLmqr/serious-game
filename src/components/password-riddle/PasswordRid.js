@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Login from "./Login";
-import Informations from "./Informations";
+import Informations from "../Informations";
 import PasswordExp from "./PasswordExp";
 import PasswordResult from "./PasswordResult";
-import "./css/Password.css";
-import Winning from "./Winning";
+import "../css/Password.css";
+import Winning from "../Winning";
 class PasswordRid extends Component {
   state = {
     logged: false,

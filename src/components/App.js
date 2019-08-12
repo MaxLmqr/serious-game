@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from "react";
-import WifiRid from "./WifiRid";
-import PasswordRid from "./PasswordRid";
-import MailRid from "./MailRid";
+import WifiRid from "./wifi-riddle/WifiRid";
+import PasswordRid from "./password-riddle/PasswordRid";
+import MailRid from "./mail-riddle/MailRid";
 import Fin from "./Fin";
 import Welcome from "./Welcome";
 import "./css/App.css";

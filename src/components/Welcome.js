@@ -15,6 +15,11 @@ const Welcome = props => {
           énigme
         </h2>
         <h3>Bonne Chance !</h3>
+        <img
+          className="ui centered medium rounded image"
+          src="emse.png"
+          alt="emse"
+        />
         <button className="ui huge primary button" onClick={props.upAvancement}>
           Commencer
           <i className="right arrow icon" />

@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import MailPreview from "./MailPreview";
 import MailDetail from "./MailDetail";
-import Informations from "./Informations";
-import Winning from "./Winning";
-import mails from "../datas/maillist";
+import Informations from "../Informations";
+import Winning from "../Winning";
+import mails from "../../datas/maillist";
+import _ from "lodash";
 
 class mailRid extends Component {
   state = {
     mails: {},
     informations:
-      "Choisissez un des mails qui apparait à votre écran. Pour chaque mail, déterminez si il est frauduleux ou pas.",
+      "Vous allez observer 10 mails différents. A chaque fois, vous devez déterminer si il est authentique ou non.",
     mailRef: 0,
     mail: {},
     numSolved: 0,
-    numMails: 10
+    numMails: 10,
+    score: 0
   };
 
   componentDidMount() {
@@ -24,8 +26,18 @@ class mailRid extends Component {
     this.setState({ numSolved: this.state.numSolved + 1 });
   };
 
-  onMailReturnClick = () => {
-    this.setState({ mailRef: 0 });
+  onMailReturnClick = (answered, id, correct) => {
+    if (answered) {
+      this.setState({
+        mailRef: 0,
+        mails: _.omit(this.state.mails, `mail${id}`)
+      });
+      if (correct) {
+        this.setState({ score: this.state.score + 1 });
+      }
+    } else {
+      alert("Répondez d'abord !");
+    }
   };
 
   onMailClick = mail => {
@@ -35,10 +47,15 @@ class mailRid extends Component {
   renderWinningContent = () => {
     if (this.state.numSolved === this.state.numMails) {
       return (
-        <Winning
-          onReturnWinningClick={this.props.downAvancement}
-          onWinningClick={this.props.upAvancement}
-        />
+        <div>
+          <div className="ui container segment">
+            Vous avez obtenu l'incroyable score de {this.state.score}/10 !
+          </div>
+          <Winning
+            onReturnWinningClick={this.props.downAvancement}
+            onWinningClick={this.props.upAvancement}
+          />
+        </div>
       );
     }
   };

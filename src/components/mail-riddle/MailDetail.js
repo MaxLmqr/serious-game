@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Mail from "./Mail";
 import MailCheckButton from "./MailCheckButton";
 import MailExp from "./MailExp";
-import "./css/MailDetail.css";
+import "../css/MailDetail.css";
 
 class MailDetail extends Component {
   state = {
@@ -49,7 +49,9 @@ class MailDetail extends Component {
     return (
       <div className="ui container mail-detail">
         <Mail
-          onMailClick={onMailReturnClick}
+          onMailClick={() =>
+            onMailReturnClick(this.state.answered, mail.id, this.state.correct)
+          }
           mail={mail}
           buttonContent="Retour aux mails"
         />

@@ -10,25 +10,28 @@ const Fin = () => {
         <h3>
           {" "}
           Nous espérons que vous avez appris des choses, et que vous avez
-          conscience des dangers potentiels présents dans le monde de
-          l'informatique.
+          conscience des dangers potentiels présents sur internet.
         </h3>
         <img
           className="ui centered medium rounded image"
           src="emse.png"
           alt="emse"
         />
-        <h1>THE END</h1>
+        <h1>Fin</h1>
         <div className="ui inverted footer">
           <p>
-            Les peines encourues pour des fraudes informatiques sont très
-            rapidement très importantes. On voit très rapidement dans les textes
-            des peines incluant de la prison et des amendes à 5 chiffres.
-            Pourtant réaliser ces attaques n'est pas très compliqué et en s'y
-            intéressant un peu on peut très rapidement faire orchestrer soi-même
-            ces attaques. A titre d'exemple, faire du phishing en usurpant une
-            identité vous emmène directement au tribunal correctionnel car le
-            phishing est un délit. Restez donc du côté des gentils ! ;)
+            Pour approfondir votre connaissance des risques existants, vous
+            pouvez vous rendre sur ce lien: <br />
+            <a href="https://www.cybermalveillance.gouv.fr/">
+              https://www.cybermalveillance.gouv.fr/
+            </a>
+          </p>
+          <p>
+            Il existe également un MOOC de l'ANSSI pour s'initier à la
+            cybersécurité: <br />
+            <a href="https://secnumacademie.gouv.fr/">
+              https://secnumacademie.gouv.fr/
+            </a>
           </p>
         </div>
       </div>

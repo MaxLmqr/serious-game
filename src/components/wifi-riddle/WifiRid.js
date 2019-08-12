@@ -1,9 +1,9 @@
 import React, { Fragment, Component } from "react";
-import wifis from "../datas/wifilist";
+import wifis from "../../datas/wifilist";
 import WifiExp from "./WifiExp";
 import WifiList from "./WifiList";
-import Winning from "./Winning";
-import Informations from "./Informations";
+import Winning from "../Winning";
+import Informations from "../Informations";
 
 class WifiRid extends Component {
   state = {

@@ -1,6 +1,6 @@
 import React from "react";
-import "./css/Password.css";
-import passwordexp from "../datas/passwordexp";
+import "../css/Password.css";
+import passwordexp from "../../datas/passwordexp";
 
 const PasswordExp = () => {
   return (
