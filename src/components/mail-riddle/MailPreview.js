@@ -9,10 +9,13 @@ const MailPreview = props => {
         <div className="five wide column subject">
           <strong>Sujet: {subject}</strong>
         </div>
-        <div className="six wide column date">
+        <div className="four wide column date">
           <strong>Date :</strong> {date}
         </div>
-        <div className="five wide column">{mailexpediteur}</div>
+        <div className="seven wide column">
+          {" "}
+          <strong>Expéditeur :</strong> {mailexpediteur}
+        </div>
       </div>
       <div className="row">
         <div className="twelve wide column expediteur">{expediteur}</div>

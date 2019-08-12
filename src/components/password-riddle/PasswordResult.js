@@ -4,6 +4,7 @@ const PasswordResult = props => {
   const { passwordResult } = props;
   return (
     <div className="ui container segment">
+      <h2> Résultats : </h2>
       <p>
         <strong>Nombre d'essai estimé pour cracker le mot de passe : </strong>{" "}
         {passwordResult.guesses}
@@ -25,8 +26,17 @@ const PasswordResult = props => {
         }
       </p>
       <p>
-        <strong>Score de votre mot de passe (de 0 à 4) :</strong>{" "}
-        {passwordResult.score}
+        <strong>
+          Score de votre mot de passe (de 0 à 4) :{" "}
+          <span
+            style={{
+              fontSize: 30,
+              color: passwordResult.score > 2 ? "green" : "red"
+            }}
+          >
+            {passwordResult.score}
+          </span>
+        </strong>
       </p>
       <p>
         <em>

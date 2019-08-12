@@ -6,7 +6,7 @@ const WifiExp = props => {
   if (answer === "wrong") {
     return (
       <div className="ui container segment">
-        <h1>
+        <h1 style={{ color: "red" }}>
           Vous êtes victime d'une attaque sur ce réseau ! Vite !!
           Déconnectez-vous
         </h1>
@@ -16,7 +16,7 @@ const WifiExp = props => {
   }
   return (
     <div className="ui container segment">
-      <h1>
+      <h1 style={{ color: "green" }}>
         Bravo ! Vous êtes en lieu sûr, naviguez paisiblement sur la toile !
       </h1>
       <div dangerouslySetInnerHTML={{ __html: wifiexp }} />

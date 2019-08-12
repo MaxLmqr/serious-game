@@ -10,7 +10,7 @@ class mailRid extends Component {
   state = {
     mails: {},
     informations:
-      "Vous allez observer 10 mails différents. A chaque fois, vous devez déterminer si il est authentique ou non.",
+      "Votre boîte de réception contient 10 mails non lus. Ouvrez-les un par un, et à chaque fois déterminez si ils sont authentique ou non. Faites attention aux détails !",
     mailRef: 0,
     mail: {},
     numSolved: 0,
@@ -49,7 +49,12 @@ class mailRid extends Component {
       return (
         <div>
           <div className="ui container segment">
-            Vous avez obtenu l'incroyable score de {this.state.score}/10 !
+            Vous avez obtenu le score de{" "}
+            <strong style={{ color: this.state.score > 6 ? "green" : "red" }}>
+              {" "}
+              {this.state.score}/10{" "}
+            </strong>{" "}
+            !
           </div>
           <Winning
             onReturnWinningClick={this.props.downAvancement}

@@ -21,7 +21,7 @@ class PasswordRid extends Component {
 
   renderContent = () => {
     const informations =
-      "Vous voyez ci-dessous un cadre d'authentification. Choisissez un mot de passe, nous allons tester sa robustesse.";
+      "Vous devez changer votre mot de passe, saisissez-le ci-dessous. Nous allons tester sa robustesse.";
     if (this.state.logged === true) {
       return (
         <div className="passwordContent">

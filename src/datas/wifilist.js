@@ -1,33 +1,38 @@
 const wifis = {
   wifi1: {
     id: 1,
-    name: "Wifi de Jack",
+    name: "eduraom",
     security: "WEP",
-    intensity: "Très faible...noooooon! Revient Jack !"
+    intensity:
+      '<img src="https://img.icons8.com/windows/32/000000/medium-connection.png">'
   },
   wifi2: {
     id: 2,
-    name: "Wifi de Gibs",
+    name: "iPhone de David",
     security: "WPA",
-    intensity: "Fort"
+    intensity:
+      '<img src="https://img.icons8.com/windows/32/000000/medium-connection.png">'
   },
   wifi3: {
     id: 3,
-    name: "Wifi de Pinpin",
+    name: "eduroam",
     security: "WPA2",
-    intensity: "Correct"
+    intensity:
+      '<img src="https://img.icons8.com/windows/32/000000/low-connection.png">'
   },
   wifi4: {
     id: 4,
-    name: "Wifi de Bonniseur de La Bath",
+    name: "eduspot",
     security: "Aucune",
-    intensity: "J'aime le bruit blanc de l'eau"
+    intensity:
+      '<img src="https://img.icons8.com/windows/32/000000/high-connection.png">'
   },
   wifi5: {
     id: 5,
-    name: "Wifi public",
+    name: "Samsung de Joséphine",
     security: "Aucune",
-    intensity: "Fort"
+    intensity:
+      '<img src="https://img.icons8.com/windows/32/000000/high-connection.png">'
   }
 };
 

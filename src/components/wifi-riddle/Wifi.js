@@ -7,7 +7,11 @@ const Wifi = props => {
     <div className="four column row">
       <div className="column">{name}</div>
       <div className="column">{security}</div>
-      <div className="column">{intensity}</div>
+      <div
+        className="column"
+        style={{ textAlign: "center" }}
+        dangerouslySetInnerHTML={{ __html: intensity }}
+      />
       <div className="column">
         <button
           className="ui primary button right floated"
