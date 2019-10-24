@@ -55,7 +55,7 @@ const mails = {
     expediteur: "Amazon",
     mailexpediteur: "shipment-tracking@amazon.fr",
     content:
-      "Bonjour, <br /><br />Votre colis contenant Smiffys Perruque nuque longue brune, balayage blond.. vous sera livré aujourd'hui. Si vous le souhaitez, vous pouvez ajouter des instructions de livraisons. Pour se faire accédez à la page 'suivi de votre colis' et reportez vous à l'encadré 'livraison par amazon' <img src=\"amazon.png\" alt=\"amazon\" /> <br />Commande n°40387985629574709",
+      "Bonjour, <br /><br />Votre colis contenant Smiffys Perruque nuque longue brune, balayage blond.. vous sera livré aujourd'hui. Si vous le souhaitez, vous pouvez ajouter des instructions de livraisons. Pour se faire accédez à la page 'suivi de votre colis' et reportez vous à l'encadré 'livraison par amazon' <img src=\"amazon.PNG\" alt=\"amazon\" /> <br />Commande n°40387985629574709",
     exp:
       "Rien de suspect ici, il n'y a aucun lien, ni aucune menace contenue dans le mail, vous pouvez passer votre chemin."
   },
@@ -79,7 +79,7 @@ const mails = {
     expediteur: "Amazon",
     mailexpediteur: "shipment-tracking@amazon.fr",
     content:
-      'Bonjour, <br /><br /> Nous vous informons que votre commande a été expédiée. Votre colis est en cours d’acheminement et cette commande ne peut donc plus être modifiée. Si vous souhaitez retourner un article, visualiser ou modifier une autre commande, veuilles consulter Vos commandes sur Amazon.fr. <br /><br />  Sportly Bière Pong Balles, 38 mm, lot de 144. <br /><br /> <img src="amazon2.png" alt="amazon2"> <br /><br /> Nous vous informons que votre commande a été expédiée. Votre colis est en cours d’acheminement et cette commande ne peut donc plus être modifiée. Si vous souhaitez retourner un article, visualiser ou modifier une autre commande, veuilles consulter Vos commandes sur Amazon.fr. <br><br>A bientôt sur Amazon.fr <br><br> Amazon.fr',
+      'Bonjour, <br /><br /> Nous vous informons que votre commande a été expédiée. Votre colis est en cours d’acheminement et cette commande ne peut donc plus être modifiée. Si vous souhaitez retourner un article, visualiser ou modifier une autre commande, veuilles consulter Vos commandes sur Amazon.fr. <br /><br />  Sportly Bière Pong Balles, 38 mm, lot de 144. <br /><br /> <img src="amazon2.PNG" alt="amazon2"> <br /><br /> Nous vous informons que votre commande a été expédiée. Votre colis est en cours d’acheminement et cette commande ne peut donc plus être modifiée. Si vous souhaitez retourner un article, visualiser ou modifier une autre commande, veuilles consulter Vos commandes sur Amazon.fr. <br><br>A bientôt sur Amazon.fr <br><br> Amazon.fr',
     exp:
       "Rien de suspect ici, il n'y a aucun lien, ni aucune menace contenue dans le mail, vous pouvez passer votre chemin."
   },
